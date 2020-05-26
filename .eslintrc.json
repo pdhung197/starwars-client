@@ -1,0 +1,58 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": ["react", "jsx-a11y", "import", "react-hooks"],
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-console": ["error"],
+    "camelcase": ["warn"],
+    "no-undef": "error",
+    "no-unused-vars": "error",
+    "no-inner-declarations": ["error"],
+    "no-trailing-spaces": "error",
+    "handle-callback-err": "error",
+    "no-unreachable": "error",
+    "consistent-return": "off",
+    "comma-dangle": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-underscore-dangle": "off",
+    "func-names": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": []
+      }
+    ],
+    "jsx-a11y/label-has-for": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx"] }
+    ],
+    "react/require-default-props": "off",
+    "react/destructuring-assignment": "off",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-nested-ternary": "warn",
+    "no-template-curly-in-string": "off",
+    "anchor-is-valid": "off",
+    "radix": "off",
+    "react/no-access-state-in-setstate": "warn",
+    "eqeqeq": "warn",
+    "react/sort-comp": "off",
+    "react/no-find-dom-node": "off",
+    "arrow-parens": "off",
+    "react/forbid-prop-types": "off",
+    "object-curly-newline": "off",
+    "prefer-template": "off",
+    "prefer-destructuring": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
