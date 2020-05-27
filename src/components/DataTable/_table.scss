@@ -1,0 +1,39 @@
+/* Custom styling for data table */
+
+.dataview-table {
+  .table {
+    font-size: 1.6rem;
+    td {
+      vertical-align: middle;
+    }
+
+    &__row {
+      &--clickable {
+        cursor: pointer;
+      }
+    }
+
+    &__cell {
+      &--avatar {
+        position: relative;
+        overflow: hidden;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        display: block;
+        img {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          height: 100%;
+          margin: 0 auto;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  font-size: 1.6rem;
+}
