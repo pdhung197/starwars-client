@@ -13,9 +13,6 @@ function MainLayout() {
             <section role="main">
                 <Switch>
                     <Route exact path="/" component={HomeView} />
-                    <Route exact path="/starwars-client">
-                        <Redirect to="/" />
-                    </Route>
                     <Route path="/data/:dataName" component={DataView} />
                 </Switch>
             </section>
