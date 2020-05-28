@@ -31,3 +31,14 @@ export const callApi = (
             if (onRequestFailure) onRequestFailure(error);
         });
 }
+
+export function UrlBuilder(url, params) {
+    let encodeURL = new URL(url);
+
+    if (params != null)
+        Object.keys(params).forEach(key =>
+            encodeURL.searchParams.append(key, params[key])
+        );
+
+    return encodeURL;
+}

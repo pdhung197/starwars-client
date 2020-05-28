@@ -24,3 +24,10 @@ export const collections = [
         route: '/data/vehicles'
     }
 ];
+
+export const collectionsList = {
+    planets: "Planets",
+    people: "People",
+    starships: "Starships",
+    vehicles: "Vehicles"
+}

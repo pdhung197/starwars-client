@@ -1,6 +1,8 @@
 /* Custom styling for data table */
+@import "./../../assets/styles/variables/commonVariables.scss";
 
-.dataview-table {
+.dataview__table {
+  position: relative;
   .table {
     font-size: 1.6rem;
     td {
@@ -32,8 +34,40 @@
       }
     }
   }
+  .no-data {
+    text-align: center;
+  }
 }
 
 .pagination {
   font-size: 1.6rem;
+  .page-item {
+    padding: 0;
+    a {
+      padding: 0.5rem 1.5rem;
+      background-color: transparent;
+
+      &:focus,
+      &:hover,
+      &:visited,
+      &:active {
+        border-color: $lightColor;
+        color: $glowColorWithBlur;
+      }
+    }
+
+    &.disabled {
+      a {
+        background-color: $glowColorWithBlur;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $lightColorWithBlur;
+        color: $darkColor;
+        border-color: $lightColor;
+      }
+    }
+  }
 }

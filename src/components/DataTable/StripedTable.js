@@ -54,7 +54,7 @@ class StripedTable extends Component {
         } = this.props || {}
         return (
             <>
-                <div className={`table-responsive-md ${className}`}>
+                <div className={`table-responsive ${className}`}>
                     <table className="table table-striped table-hover">
                         <thead>
                             <tr>

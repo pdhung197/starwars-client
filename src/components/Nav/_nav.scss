@@ -273,7 +273,7 @@
     height: 6rem;
     @include transition(0.3s);
     position: relative;
-    background-color: $darkWithBlur;
+    background-color: $darkWithLightBlur;
 
     &__head {
       width: auto;

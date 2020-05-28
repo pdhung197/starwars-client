@@ -1,7 +1,82 @@
 /* Modal Detail View custom styling */
+@import "./../../assets/styles/variables/commonVariables.scss";
 
 .detail-view {
   &__modal {
     font-size: 1.6rem;
+    width: 90%;
+    @include boxshadow(0px 0px 4px $lightColor);
+    * {
+      color: $lightColor;
+    }
+    .modal-content {
+      background-color: $darkWithBlur;
+      position: relative;
+    }
+
+    .modal-body {
+      padding: 0;
+    }
+
+    .modal-header {
+      padding: 0;
+      height: 0;
+      overflow: visible;
+      button {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        z-index: 10;
+        font-size: 4rem;
+        &:hover,
+        &:visited,
+        &:active {
+          border: none;
+          outline: none;
+          @include boxshadow(none);
+        }
+      }
+    }
+  }
+
+  &__main-img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+
+  &__detail {
+    padding: 2rem;
+    width: auto;
+    margin: 0 auto;
+    &--label {
+      font-weight: $fw-b;
+    }
+
+    &--content {
+      margin-left: 1rem;
+      color: $lightColorWithBlur;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .detail-view {
+    &__detail {
+      padding: 5rem;
+    }
   }
 }

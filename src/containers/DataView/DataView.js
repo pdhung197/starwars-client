@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 
-import { getDataListPerPage } from './../../actions/dataActions';
+import { getDataList } from './../../actions/dataActions';
 
 import DetailView from './../DetailView/DetailView';
 
 import StripedTable from './../../components/DataTable/StripedTable';
+import SearchForm from './../../components/SearchForm/SearchForm';
 
 import { dataViewHeaders } from './dataHeader';
+import { collectionsList } from './../../constants/collections';
+
+import './_DataView.scss';
 
 class DataView extends Component {
     constructor(props) {
@@ -20,6 +24,7 @@ class DataView extends Component {
                 totalPage: 0,
                 limit: 10
             },
+            search: '',
             detailCharacter: null
         }
     }
@@ -27,8 +32,17 @@ class DataView extends Component {
     //#region 'Data region'
 
     /* Function call action to fetch data depending on dataName (eg: Planet, Vehicles ...) */
-    handleFetchData = (dataName, page) => {
-        getDataListPerPage(dataName, page)
+    handleFetchData = (dataName, params = { page: 1 }) => {
+        const {
+            search
+        } = this.state || {};
+        const {
+            page = 1
+        } = params;
+
+        if (search && search.length) params.search = search;
+
+        getDataList(dataName, params)
             .then(res => {
                 const {
                     data: {
@@ -69,7 +83,10 @@ class DataView extends Component {
             } = {}
         } = this.state || {};
 
-        this.handleFetchData(dataName, page);
+        const params = {
+            page
+        }
+        this.handleFetchData(dataName, params);
     }
 
     shouldComponentUpdate(nextProps) {
@@ -97,7 +114,9 @@ class DataView extends Component {
                     limit: 10
                 },
                 detailCharacter: null
-            }, () => this.handleFetchData(nextDataName, 1));
+            }, () => this.handleFetchData(nextDataName, {
+                page: 1
+            }));
         }
 
         return true;
@@ -105,6 +124,11 @@ class DataView extends Component {
     //#endregion 'Life circle'
 
     //#region 'Table event handle region'
+    handleSearchChange = (e) => {
+        const search = e.target.value;
+        this.setState({ search });
+    }
+
     handleChangeActivedPage = (page) => {
         const {
             match: {
@@ -114,7 +138,10 @@ class DataView extends Component {
             } = {}
         } = this.props || {};
 
-        this.handleFetchData(dataName, page);
+        const params = {
+            page
+        }
+        this.handleFetchData(dataName, params);
     }
 
     handleNextOrPreviousPage = (nextOrPrv) => {
@@ -128,7 +155,10 @@ class DataView extends Component {
 
         const { page } = this.state.footerData;
 
-        this.handleFetchData(dataName, nextOrPrv === 'prv' ? page - 1 : page + 1);
+        const params = {
+            page: nextOrPrv === 'prv' ? page - 1 : page + 1
+        }
+        this.handleFetchData(dataName, params);
     }
 
     handleCloseDetailView = () => {
@@ -160,17 +190,25 @@ class DataView extends Component {
             const {
                 key,
                 label,
-                show = true
+                show = true,
+                width,
+                minWidth
             } = column;
 
+            const style = {};
+
+            if (width) style.width = width;
+            if (minWidth) style.minWidth = minWidth;
+
             if (show) {
-                TableHeaders.push(<span key={key}>{label}</span>)
+                TableHeaders.push(<div key={key} style={style}>{label}</div>)
             }
 
             return TableHeaders;
         }, []);
     }
 
+    /* Get custom table columns */
     getTableColumns = () => {
         const {
             match: {
@@ -181,7 +219,12 @@ class DataView extends Component {
         } = this.props || {};
 
         return (dataViewHeaders[`${dataName}Columns`] || []).reduce((tableColumns, column) => {
-            const tableColumn = { ...column };
+            const tableColumn = {
+                ...column
+            };
+
+            if (tableColumn.show === false) return tableColumns;
+
             switch (tableColumn.key) {
                 case 'avatar':
                     tableColumn.customCell = (character) => {
@@ -206,15 +249,36 @@ class DataView extends Component {
 
     render() {
         const {
+            match: {
+                params: {
+                    dataName
+                } = {}
+            } = {}
+        } = this.props || {};
+
+        const {
             dataList,
             footerData,
-            detailCharacter
+            detailCharacter,
+            search
         } = this.state || {};
-
+        console.log({ search });
         return (
-            <div>
+            <div className="dataview">
+                <div className="dataview__header">
+                    <div className="dataview__title">
+                        <h1>{collectionsList[dataName] || 'Data'} list view</h1>
+                    </div>
+                    <div className="dataview__tool">
+                        <SearchForm
+                            onInputChange={this.handleSearchChange}
+                            onSearch={() => this.handleFetchData(dataName)}
+                            inputValue={search}
+                        />
+                    </div>
+                </div>
                 <StripedTable
-                    className="dataview-table"
+                    className="dataview__table"
                     bodyData={dataList}
                     tableHeaders={this.getTableHeaders()}
                     tableColumns={this.getTableColumns()}
@@ -226,6 +290,7 @@ class DataView extends Component {
                 <DetailView
                     data={detailCharacter}
                     onHide={this.handleCloseDetailView}
+                    dataName={dataName}
                 />
             </div>
         )

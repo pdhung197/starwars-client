@@ -1,13 +1,15 @@
 import { dataListApi } from './../utils/api/apiConfig';
-import { callApi } from './../utils/api/apiUtils';
+import { callApi, UrlBuilder } from './../utils/api/apiUtils';
 
 /* Get data list of characters, vehicles, people, planet... */
-export const getDataListPerPage = (dataName, page = 0) => {
+export const getDataList = (dataName, options = {}) => {
+    options = Object.assign({}, options);
     const config = {
-        method: 'GET'
-    }
+        method: 'get'
+    };
 
-    const url = `${dataListApi}${dataName}/${page ? 'page=' + page : ''}`;
+    const baseUrl = `${dataListApi}${dataName}/`;
+    const url = UrlBuilder(baseUrl, options);
 
     return callApi(
         url,

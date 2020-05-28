@@ -1,0 +1,58 @@
+/* Data view custome styling */
+@import "./../../assets/styles/variables/commonVariables.scss";
+
+.dataview {
+  background-color: $darkWithLightBlur;
+  * {
+    color: $lightColor;
+  }
+
+  &__title {
+    padding: 1rem;
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      line-height: 1;
+    }
+  }
+
+  &__tool {
+    padding: 3.5rem 0;
+    .btn,
+    .form-control {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-lg-min) and (orientation: landscape),
+  screen and (min-width: $screen-lg-min) {
+  .dataview {
+    &__title {
+      float: left;
+    }
+
+    &__tool {
+      padding: 0.5rem 1rem;
+      float: right;
+    }
+
+    &__header {
+      &::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .dataview {
+    /* height: calc(100vh - 6rem);
+    position: relative; */
+    @include flexbox();
+    @include flex-direction(column);
+  }
+}
