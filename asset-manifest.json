@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://pdhung197.github.io/static/css/main.4f8562af.chunk.css",
-    "main.js": "https://pdhung197.github.io/static/js/main.b9177d32.chunk.js",
-    "main.js.map": "https://pdhung197.github.io/static/js/main.b9177d32.chunk.js.map",
+    "main.css": "https://pdhung197.github.io/static/css/main.c63714b2.chunk.css",
+    "main.js": "https://pdhung197.github.io/static/js/main.884a464c.chunk.js",
+    "main.js.map": "https://pdhung197.github.io/static/js/main.884a464c.chunk.js.map",
     "runtime-main.js": "https://pdhung197.github.io/static/js/runtime-main.26ca0264.js",
     "runtime-main.js.map": "https://pdhung197.github.io/static/js/runtime-main.26ca0264.js.map",
-    "static/js/2.e1361f04.chunk.js": "https://pdhung197.github.io/static/js/2.e1361f04.chunk.js",
-    "static/js/2.e1361f04.chunk.js.map": "https://pdhung197.github.io/static/js/2.e1361f04.chunk.js.map",
+    "static/js/2.0b4a64df.chunk.js": "https://pdhung197.github.io/static/js/2.0b4a64df.chunk.js",
+    "static/js/2.0b4a64df.chunk.js.map": "https://pdhung197.github.io/static/js/2.0b4a64df.chunk.js.map",
     "index.html": "https://pdhung197.github.io/index.html",
-    "precache-manifest.7baf2404aa152a557c79ded13ec53004.js": "https://pdhung197.github.io/precache-manifest.7baf2404aa152a557c79ded13ec53004.js",
+    "precache-manifest.db8d7e21a03883154e1cfc07b3bc7b1b.js": "https://pdhung197.github.io/precache-manifest.db8d7e21a03883154e1cfc07b3bc7b1b.js",
     "service-worker.js": "https://pdhung197.github.io/service-worker.js",
-    "static/css/main.4f8562af.chunk.css.map": "https://pdhung197.github.io/static/css/main.4f8562af.chunk.css.map",
-    "static/js/2.e1361f04.chunk.js.LICENSE.txt": "https://pdhung197.github.io/static/js/2.e1361f04.chunk.js.LICENSE.txt",
+    "static/css/main.c63714b2.chunk.css.map": "https://pdhung197.github.io/static/css/main.c63714b2.chunk.css.map",
+    "static/js/2.0b4a64df.chunk.js.LICENSE.txt": "https://pdhung197.github.io/static/js/2.0b4a64df.chunk.js.LICENSE.txt",
     "static/media/people.png": "https://pdhung197.github.io/static/media/people.5cc2d89b.png",
     "static/media/planet.png": "https://pdhung197.github.io/static/media/planet.8d9481f5.png",
     "static/media/star-wars-logo-png-3-transparent.png": "https://pdhung197.github.io/static/media/star-wars-logo-png-3-transparent.62a19047.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.26ca0264.js",
-    "static/js/2.e1361f04.chunk.js",
-    "static/css/main.4f8562af.chunk.css",
-    "static/js/main.b9177d32.chunk.js"
+    "static/js/2.0b4a64df.chunk.js",
+    "static/css/main.c63714b2.chunk.css",
+    "static/js/main.884a464c.chunk.js"
   ]
 }
