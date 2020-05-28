@@ -107,12 +107,14 @@ class DataView extends Component {
         if (dataName !== nextDataName) {
             /* If data name is changed, reset status of datatable to fetch new data */
             this.setState({
+                dataList: [],
                 footerData: {
                     page: 1,
                     count: 0,
                     totalPage: 0,
                     limit: 10
                 },
+                search: '',
                 detailCharacter: null
             }, () => this.handleFetchData(nextDataName, {
                 page: 1
