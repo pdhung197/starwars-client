@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9213eeb901d4f5a1a37bbcab7b046814",
+    "revision": "6d3d6668839fb9453884023ea13443ca",
     "url": "/starwars-client/index.html"
   },
   {
-    "revision": "8a58e8ec93e638217406",
-    "url": "/starwars-client/static/css/main.b75ef02b.chunk.css"
+    "revision": "b241e6f5708becedc5f7",
+    "url": "/starwars-client/static/css/main.cc91cc13.chunk.css"
   },
   {
-    "revision": "57656779201892c81960",
-    "url": "/starwars-client/static/js/2.cedefd91.chunk.js"
+    "revision": "2e43575ecfeb06b134c0",
+    "url": "/starwars-client/static/js/2.7cafbce4.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/starwars-client/static/js/2.cedefd91.chunk.js.LICENSE.txt"
+    "url": "/starwars-client/static/js/2.7cafbce4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a58e8ec93e638217406",
-    "url": "/starwars-client/static/js/main.c9cfd5f2.chunk.js"
+    "revision": "b241e6f5708becedc5f7",
+    "url": "/starwars-client/static/js/main.3326bf32.chunk.js"
   },
   {
     "revision": "72935d172f4d4987e318",
