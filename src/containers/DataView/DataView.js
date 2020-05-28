@@ -262,7 +262,7 @@ class DataView extends Component {
             detailCharacter,
             search
         } = this.state || {};
-        console.log({ search });
+
         return (
             <div className="dataview">
                 <div className="dataview__header">
@@ -274,6 +274,7 @@ class DataView extends Component {
                             onInputChange={this.handleSearchChange}
                             onSearch={() => this.handleFetchData(dataName)}
                             inputValue={search}
+                            placeholder={`Enter ${dataName}'s name to search`}
                         />
                     </div>
                 </div>

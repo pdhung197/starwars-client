@@ -7,7 +7,8 @@ function SearchForm(props) {
     const {
         inputValue,
         onSearch = () => { },
-        onInputChange = () => { }
+        onInputChange = () => { },
+        placeholder = ''
     } = props || {};
 
     const inputProps = {};
@@ -17,14 +18,19 @@ function SearchForm(props) {
         inputProps.onChange = onInputChange;
     }
 
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") onSearch();
+    }
+
     return (
         <div className={`input-group search-group`}>
             <input
                 type="text"
                 className="form-control search-group__input"
-                placeholder="Enter text to search"
-                aria-label="Enter text to search"
+                placeholder={placeholder}
+                aria-label={placeholder}
                 aria-describedby="button-search"
+                onKeyPress={handleKeyPress}
                 {...inputProps}
             />
             <div className="input-group-append">
