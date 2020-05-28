@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/starwars-client/static/css/main.bda596f3.chunk.css",
-    "main.js": "/starwars-client/static/js/main.206c6b53.chunk.js",
-    "main.js.map": "/starwars-client/static/js/main.206c6b53.chunk.js.map",
+    "main.css": "/starwars-client/static/css/main.c447bf9c.chunk.css",
+    "main.js": "/starwars-client/static/js/main.d791a14d.chunk.js",
+    "main.js.map": "/starwars-client/static/js/main.d791a14d.chunk.js.map",
     "runtime-main.js": "/starwars-client/static/js/runtime-main.bf8bcc16.js",
     "runtime-main.js.map": "/starwars-client/static/js/runtime-main.bf8bcc16.js.map",
-    "static/js/2.7cafbce4.chunk.js": "/starwars-client/static/js/2.7cafbce4.chunk.js",
-    "static/js/2.7cafbce4.chunk.js.map": "/starwars-client/static/js/2.7cafbce4.chunk.js.map",
+    "static/js/2.cedefd91.chunk.js": "/starwars-client/static/js/2.cedefd91.chunk.js",
+    "static/js/2.cedefd91.chunk.js.map": "/starwars-client/static/js/2.cedefd91.chunk.js.map",
     "index.html": "/starwars-client/index.html",
-    "precache-manifest.ef7274d07fe1a1a50788017c4202ae91.js": "/starwars-client/precache-manifest.ef7274d07fe1a1a50788017c4202ae91.js",
+    "precache-manifest.11d8db30facb1b13c80659b9d443a6ad.js": "/starwars-client/precache-manifest.11d8db30facb1b13c80659b9d443a6ad.js",
     "service-worker.js": "/starwars-client/service-worker.js",
-    "static/css/main.bda596f3.chunk.css.map": "/starwars-client/static/css/main.bda596f3.chunk.css.map",
-    "static/js/2.7cafbce4.chunk.js.LICENSE.txt": "/starwars-client/static/js/2.7cafbce4.chunk.js.LICENSE.txt",
+    "static/css/main.c447bf9c.chunk.css.map": "/starwars-client/static/css/main.c447bf9c.chunk.css.map",
+    "static/js/2.cedefd91.chunk.js.LICENSE.txt": "/starwars-client/static/js/2.cedefd91.chunk.js.LICENSE.txt",
     "static/media/people.png": "/starwars-client/static/media/people.5cc2d89b.png",
     "static/media/planet.png": "/starwars-client/static/media/planet.8d9481f5.png",
     "static/media/star-wars-logo-png-3-transparent.png": "/starwars-client/static/media/star-wars-logo-png-3-transparent.62a19047.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bf8bcc16.js",
-    "static/js/2.7cafbce4.chunk.js",
-    "static/css/main.bda596f3.chunk.css",
-    "static/js/main.206c6b53.chunk.js"
+    "static/js/2.cedefd91.chunk.js",
+    "static/css/main.c447bf9c.chunk.css",
+    "static/js/main.d791a14d.chunk.js"
   ]
 }
