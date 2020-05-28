@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "https://pdhung197.github.io/static/css/main.399a2c33.chunk.css",
-    "main.js": "https://pdhung197.github.io/static/js/main.884a464c.chunk.js",
-    "main.js.map": "https://pdhung197.github.io/static/js/main.884a464c.chunk.js.map",
-    "runtime-main.js": "https://pdhung197.github.io/static/js/runtime-main.26ca0264.js",
-    "runtime-main.js.map": "https://pdhung197.github.io/static/js/runtime-main.26ca0264.js.map",
-    "static/js/2.0b4a64df.chunk.js": "https://pdhung197.github.io/static/js/2.0b4a64df.chunk.js",
-    "static/js/2.0b4a64df.chunk.js.map": "https://pdhung197.github.io/static/js/2.0b4a64df.chunk.js.map",
-    "index.html": "https://pdhung197.github.io/index.html",
-    "precache-manifest.a79acaa4d665840038f5bef7af77d1d9.js": "https://pdhung197.github.io/precache-manifest.a79acaa4d665840038f5bef7af77d1d9.js",
-    "service-worker.js": "https://pdhung197.github.io/service-worker.js",
-    "static/css/main.399a2c33.chunk.css.map": "https://pdhung197.github.io/static/css/main.399a2c33.chunk.css.map",
-    "static/js/2.0b4a64df.chunk.js.LICENSE.txt": "https://pdhung197.github.io/static/js/2.0b4a64df.chunk.js.LICENSE.txt",
-    "static/media/people.png": "https://pdhung197.github.io/static/media/people.5cc2d89b.png",
-    "static/media/planet.png": "https://pdhung197.github.io/static/media/planet.8d9481f5.png",
-    "static/media/star-wars-logo-png-3-transparent.png": "https://pdhung197.github.io/static/media/star-wars-logo-png-3-transparent.62a19047.png",
-    "static/media/starship.png": "https://pdhung197.github.io/static/media/starship.f7e7871e.png",
-    "static/media/vehicles.png": "https://pdhung197.github.io/static/media/vehicles.71f41fb5.png"
+    "main.css": "https://pdhung197.github.io/starwars-client/static/css/main.ebeb95ca.chunk.css",
+    "main.js": "https://pdhung197.github.io/starwars-client/static/js/main.6b241aca.chunk.js",
+    "main.js.map": "https://pdhung197.github.io/starwars-client/static/js/main.6b241aca.chunk.js.map",
+    "runtime-main.js": "https://pdhung197.github.io/starwars-client/static/js/runtime-main.1b199d0d.js",
+    "runtime-main.js.map": "https://pdhung197.github.io/starwars-client/static/js/runtime-main.1b199d0d.js.map",
+    "static/js/2.0b4a64df.chunk.js": "https://pdhung197.github.io/starwars-client/static/js/2.0b4a64df.chunk.js",
+    "static/js/2.0b4a64df.chunk.js.map": "https://pdhung197.github.io/starwars-client/static/js/2.0b4a64df.chunk.js.map",
+    "index.html": "https://pdhung197.github.io/starwars-client/index.html",
+    "precache-manifest.6aa429d35d8824cecc74a6d80e0872be.js": "https://pdhung197.github.io/starwars-client/precache-manifest.6aa429d35d8824cecc74a6d80e0872be.js",
+    "service-worker.js": "https://pdhung197.github.io/starwars-client/service-worker.js",
+    "static/css/main.ebeb95ca.chunk.css.map": "https://pdhung197.github.io/starwars-client/static/css/main.ebeb95ca.chunk.css.map",
+    "static/js/2.0b4a64df.chunk.js.LICENSE.txt": "https://pdhung197.github.io/starwars-client/static/js/2.0b4a64df.chunk.js.LICENSE.txt",
+    "static/media/people.png": "https://pdhung197.github.io/starwars-client/static/media/people.5cc2d89b.png",
+    "static/media/planet.png": "https://pdhung197.github.io/starwars-client/static/media/planet.8d9481f5.png",
+    "static/media/star-wars-logo-png-3-transparent.png": "https://pdhung197.github.io/starwars-client/static/media/star-wars-logo-png-3-transparent.62a19047.png",
+    "static/media/starship.png": "https://pdhung197.github.io/starwars-client/static/media/starship.f7e7871e.png",
+    "static/media/vehicles.png": "https://pdhung197.github.io/starwars-client/static/media/vehicles.71f41fb5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.26ca0264.js",
+    "static/js/runtime-main.1b199d0d.js",
     "static/js/2.0b4a64df.chunk.js",
-    "static/css/main.399a2c33.chunk.css",
-    "static/js/main.884a464c.chunk.js"
+    "static/css/main.ebeb95ca.chunk.css",
+    "static/js/main.6b241aca.chunk.js"
   ]
 }
