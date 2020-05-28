@@ -1,0 +1,53 @@
+/* Font Weight */
+$fw-th: 100;
+$fw-xth: 200;
+$fw-l: 300;
+$fw-r: 400;
+$fw-m: 500;
+$fw-sb: 600;
+$fw-b: 700;
+
+/* Screen size */
+$screen-sm-min: 36em;
+
+// Small tablets (portrait view)
+$screen-md-min: 48em;
+
+// Tablets and small desktops
+$screen-lg-min: 62em;
+
+// Large tablets and desktops
+$screen-xl-min: 75em;
+
+// Large tablets and desktops
+$screen-el-min: 90em;
+
+// Large tablets and desktops
+$screen-hg-min: 105em;
+
+$breakpoints: (
+  xs: $screen-sm-min,
+  sm: $screen-md-min,
+  md: $screen-lg-min,
+  lg: $screen-xl-min,
+  xl: $screen-el-min,
+  el: $screen-hg-min,
+);
+
+@mixin dv-responsive($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}

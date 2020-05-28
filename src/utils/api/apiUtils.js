@@ -23,7 +23,6 @@ export const callApi = (
 
     return clientRequest
         .then(res => {
-            console.log({ res });
             if (onRequestSuccess) onRequestSuccess(res);
             return res;
         })

@@ -1,0 +1,410 @@
+/* Navigation custom styling */
+@import "./../../assets/styles/variables/commonVariables.scss";
+
+.starwars-nav {
+  font-size: 1.6rem;
+  z-index: 10;
+  height: 6rem;
+  @include transition(0.3s);
+  position: relative;
+  background-color: $darkWithBlur;
+
+  &__head {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 1.5rem;
+    &::after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+    }
+  }
+
+  &__logo {
+    height: 4rem;
+    width: auto;
+    float: left;
+    @include transition(0.3s);
+    img {
+      height: 100%;
+      width: auto;
+      @include filter(drop-shadow(0px 0px 0px $lightColor));
+      @include transition(0.3s);
+    }
+
+    &:hover {
+      img {
+        @include filter(drop-shadow(0px 0px 2px $lightColor));
+        @include transition(0.3s);
+      }
+    }
+  }
+
+  &__ham {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    float: right;
+    padding: 0;
+    border: none !important;
+    outline: none !important;
+    position: relative;
+
+    &::after,
+    &::before,
+    > div {
+      width: 100%;
+      content: "";
+      display: block;
+      height: 0.6rem;
+      @include boxshadow(0px 0px 5px $glowColor);
+      border-radius: 0.3rem;
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: 0;
+      @include transition(0.3s);
+    }
+
+    &::after {
+      bottom: 0;
+      @include transition(0.3s);
+    }
+
+    > div {
+      top: 50%;
+      @include transform(translateY(-50%));
+      opacity: 1;
+      visibility: visible;
+      @include transition(0.3s);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    @include transition(0.3s);
+    background-color: $darkWithBlur;
+  }
+
+  &__item {
+    padding: 0;
+    @include boxshadow(0px 1px 0.5px $glowColorWithBlur);
+    border: none;
+    a {
+      padding: 2rem;
+      display: block;
+      vertical-align: middle;
+      @include flexbox();
+      @include align-items(center);
+    }
+    &--img {
+      width: 3rem;
+      margin-right: 2rem;
+      overflow: hidden;
+
+      img {
+        width: 3rem;
+        height: auto;
+        @include filter(drop-shadow(0px 0px 0px $lightColor));
+        @include transform(scale(1));
+        @include transition(0.3s);
+      }
+    }
+    span {
+      color: $lightColor;
+      font-size: 1.8rem;
+      @include filter(drop-shadow(0px 0px 0px $glowColor));
+      @include transition(0.3s);
+    }
+    &:hover {
+      .starwars-nav__item--img {
+        img {
+          @include filter(drop-shadow(0px 0px 3px $lightColor));
+          @include transform(scale(1.1));
+          @include transition(0.3s);
+        }
+      }
+      span {
+        @include filter(drop-shadow(0px 0px 3px $glowColor));
+        @include transition(0.3s);
+      }
+    }
+  }
+
+  &.starwars-nav-home {
+    height: 100vh;
+    @include transition(0.3s);
+    background-color: transparent;
+
+    .starwars-nav__ham {
+      display: none;
+    }
+
+    .starwars-nav__logo {
+      width: 50%;
+      height: auto;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      @include transform(translate(-50%, -50%));
+      @include transition(0.3s);
+      img {
+        width: 100%;
+        height: auto;
+        @include transition(0.3s);
+      }
+    }
+
+    .starwars-nav__list {
+      position: fixed;
+      z-index: 1;
+      width: 100vw;
+      height: 100%;
+      max-height: unset;
+      padding: 1rem;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      @include flexbox();
+      @include flex-wrap(wrap);
+      @include transition(0.3s);
+    }
+
+    .starwars-nav__item {
+      @include boxshadow(none);
+      @include flex(1 0 50%);
+      a {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        @include inline-flex();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        overflow: hidden;
+      }
+      &--img,
+      span {
+        display: block;
+      }
+
+      &--img {
+        width: 100%;
+        overflow: visible;
+        margin: 0;
+        text-align: center;
+
+        img {
+          width: 50%;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+
+      span {
+        font-size: 2.2rem;
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        font-weight: $fw-sb;
+        color: $lightColorWithBlur;
+      }
+    }
+  }
+
+  &.nav-open {
+    .starwars-nav__list {
+      max-height: calc(100vh - 6rem);
+      @include transition(0.3s);
+    }
+
+    .starwars-nav__ham {
+      > div {
+        opacity: 0;
+        visibility: hidden;
+        @include transition(0.3s);
+      }
+
+      &::after {
+        bottom: 1.7rem;
+        @include transform(rotate(45deg));
+        @include transition(0.3s);
+      }
+
+      &::before {
+        top: 1.7rem;
+        @include transform(rotate(-45deg));
+        @include transition(0.3s);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-lg-min) and (orientation: landscape),
+  screen and (min-width: $screen-lg-min) {
+  .starwars-nav {
+    &.starwars-nav-home {
+      .starwars-nav__logo {
+        width: 30%;
+        @include transition(0.3s);
+      }
+
+      .starwars-nav__item {
+        &--img {
+          width: 50%;
+          @include transition(0.3s);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .starwars-nav {
+    font-size: 1.6rem;
+    z-index: 10;
+    height: 6rem;
+    @include transition(0.3s);
+    position: relative;
+    background-color: $darkWithBlur;
+
+    &__head {
+      width: auto;
+      height: 6rem;
+      padding: 0;
+      display: block;
+      position: relative;
+      float: right;
+
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
+
+    &__logo {
+      height: 6rem;
+      padding: 1rem;
+      width: auto;
+      float: none;
+      @include transition(0.3s);
+      img {
+        height: 4rem;
+        width: auto;
+        @include transition(0.3s);
+      }
+    }
+
+    &__ham {
+      display: none;
+    }
+
+    &__list {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      max-height: unset;
+      height: 6rem;
+      overflow: hidden;
+      @include transition(0.3s);
+      background-color: transparent;
+    }
+
+    &__item {
+      padding: 0;
+      display: inline-block;
+      height: 6rem;
+      @include boxshadow(none);
+      a {
+        padding: 0 1.5rem;
+        height: 6rem;
+        display: block;
+        @include flexbox();
+        @include align-items(center);
+      }
+      &--img {
+        width: 3rem;
+        margin-right: 1rem;
+
+        img {
+          width: 3rem;
+          height: auto;
+          @include filter(drop-shadow(0px 0px 0px $lightColor));
+          @include transform(scale(1));
+          @include transition(0.3s);
+        }
+      }
+
+      &--active {
+        .starwars-nav__item--img {
+          img {
+            @include filter(drop-shadow(0px 0px 3px $lightColor));
+            @include transition(0.3s);
+          }
+        }
+        span {
+          @include filter(drop-shadow(0px 0px 3px $glowColor));
+          @include transition(0.3s);
+        }
+      }
+    }
+
+    &.starwars-nav-home {
+      .starwars-nav__logo {
+        width: 30%;
+        top: 20%;
+        @include transform(translate(-50%, -20%));
+        @include transition(0.3s);
+      }
+
+      .starwars-nav__list {
+        width: 100vw;
+        height: 50%;
+        max-height: unset;
+        top: unset;
+        bottom: 0;
+        @include flexbox();
+        @include flex-wrap(nowrap);
+        @include transition(0.3s);
+      }
+
+      .starwars-nav__item {
+        height: 100%;
+        @include flex(1 0 25%);
+        a {
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          @include inline-flex();
+          @include flex-direction(column);
+          @include justify-content(center);
+          @include align-items(center);
+          overflow: hidden;
+        }
+
+        &--img,
+        span {
+          display: block;
+        }
+
+        &--img {
+          width: 100%;
+          margin: 0;
+
+          img {
+            width: 50%;
+            height: auto;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

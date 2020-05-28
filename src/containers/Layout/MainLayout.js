@@ -5,7 +5,6 @@ import HomeView from './../Home/HomeView';
 import DataView from './../DataView/DataView';
 
 import Nav from './../../components/Nav/Nav';
-import Footer from './../../components/Footer/Footer';
 
 function MainLayout() {
     return (
@@ -17,7 +16,6 @@ function MainLayout() {
                     <Route path="/data/:dataName" component={DataView} />
                 </Switch>
             </section>
-            <Footer />
         </Router>
 
     )

@@ -15,7 +15,7 @@ function DetailView(props) {
         image = '',
         body = {}
     } = data || {};
-    console.log({ body });
+
     return (
         <Modal
             show={!!data}
