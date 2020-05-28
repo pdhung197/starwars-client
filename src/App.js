@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import MainLayout from './containers/Layout/MainLayout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MainLayout />
+      <div id="star-bg">
+        <div id="star-small"></div>
+        <div id="star-medium"></div>
+        <div id="star-big"></div>
+      </div>
+    </>
   );
 }
 

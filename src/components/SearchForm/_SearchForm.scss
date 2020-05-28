@@ -1,0 +1,52 @@
+/* Custome search form styling */
+@import "./../../assets/styles/variables/commonVariables.scss";
+
+.search-group {
+  &__input {
+    &.form-control {
+      border-radius: 0;
+      color: $lightColor;
+      background-color: transparent;
+      outline: none;
+      border-width: 0;
+      border-bottom-width: 1px;
+      &:focus {
+        color: $lightColor;
+        background-color: transparent;
+        outline: none;
+        border-color: $lightColor;
+        border-width: 0;
+        border-bottom-width: 1px;
+        @include boxshadow(none);
+      }
+    }
+  }
+
+  .btn {
+    color: $lightColor;
+    padding: 0rem 2rem;
+    border-radius: 0;
+    outline: none;
+    border-color: $lightColor;
+    margin-left: 5px;
+    @include textshadow(0px 0px 0px $lightColor);
+    @include transition(0.3s);
+    &:hover {
+      color: $lightColor;
+      @include textshadow(0px 0px 3px $lightColor);
+      @include transition(0.3s);
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-lg-min) and (orientation: landscape),
+  screen and (min-width: $screen-lg-min) {
+  .search-group {
+    .btn {
+      color: $lightColor;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+}

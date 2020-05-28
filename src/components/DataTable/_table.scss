@@ -1,0 +1,73 @@
+/* Custom styling for data table */
+@import "./../../assets/styles/variables/commonVariables.scss";
+
+.dataview__table {
+  position: relative;
+  .table {
+    font-size: 1.6rem;
+    td {
+      vertical-align: middle;
+    }
+
+    &__row {
+      &--clickable {
+        cursor: pointer;
+      }
+    }
+
+    &__cell {
+      &--avatar {
+        position: relative;
+        overflow: hidden;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        display: block;
+        img {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          height: 100%;
+          margin: 0 auto;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+  .no-data {
+    text-align: center;
+  }
+}
+
+.pagination {
+  font-size: 1.6rem;
+  .page-item {
+    padding: 0;
+    a {
+      padding: 0.5rem 1.5rem;
+      background-color: transparent;
+
+      &:focus,
+      &:hover,
+      &:visited,
+      &:active {
+        border-color: $lightColor;
+        color: $glowColorWithBlur;
+      }
+    }
+
+    &.disabled {
+      a {
+        background-color: $glowColorWithBlur;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $lightColorWithBlur;
+        color: $darkColor;
+        border-color: $lightColor;
+      }
+    }
+  }
+}

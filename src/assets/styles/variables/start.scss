@@ -1,0 +1,21 @@
+/* Function generate "star" point from box-shadow */
+@function generate-star-box-shadow($n) {
+  $value: "#{random(2000)}px #{random(2000)}px #FFF";
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+  }
+  @return unquote($value);
+}
+
+$star-small: generate-star-box-shadow(500);
+$star-medium: generate-star-box-shadow(200);
+$star-big: generate-star-box-shadow(100);
+
+@keyframes starsAnimation {
+  from {
+    transform: translate(-1000px, 1000px);
+  }
+  to {
+    transform: translate(0, -1000px);
+  }
+}
