@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/starwars-client/static/css/main.04eacc03.chunk.css",
-    "main.js": "/starwars-client/static/js/main.c9cfd5f2.chunk.js",
-    "main.js.map": "/starwars-client/static/js/main.c9cfd5f2.chunk.js.map",
-    "runtime-main.js": "/starwars-client/static/js/runtime-main.bf8bcc16.js",
-    "runtime-main.js.map": "/starwars-client/static/js/runtime-main.bf8bcc16.js.map",
-    "static/js/2.cedefd91.chunk.js": "/starwars-client/static/js/2.cedefd91.chunk.js",
-    "static/js/2.cedefd91.chunk.js.map": "/starwars-client/static/js/2.cedefd91.chunk.js.map",
-    "index.html": "/starwars-client/index.html",
-    "precache-manifest.3617f9fa7288ebf356ec588484f004b7.js": "/starwars-client/precache-manifest.3617f9fa7288ebf356ec588484f004b7.js",
-    "service-worker.js": "/starwars-client/service-worker.js",
-    "static/css/main.04eacc03.chunk.css.map": "/starwars-client/static/css/main.04eacc03.chunk.css.map",
-    "static/js/2.cedefd91.chunk.js.LICENSE.txt": "/starwars-client/static/js/2.cedefd91.chunk.js.LICENSE.txt",
-    "static/media/people.png": "/starwars-client/static/media/people.5cc2d89b.png",
-    "static/media/planet.png": "/starwars-client/static/media/planet.8d9481f5.png",
-    "static/media/star-wars-logo-png-3-transparent.png": "/starwars-client/static/media/star-wars-logo-png-3-transparent.62a19047.png",
-    "static/media/starship.png": "/starwars-client/static/media/starship.f7e7871e.png",
-    "static/media/vehicles.png": "/starwars-client/static/media/vehicles.71f41fb5.png"
+    "main.css": "/static/css/main.c6b8190d.chunk.css",
+    "main.js": "/static/js/main.0dd4d42c.chunk.js",
+    "main.js.map": "/static/js/main.0dd4d42c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a1e6d78a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a1e6d78a.js.map",
+    "static/js/2.cedefd91.chunk.js": "/static/js/2.cedefd91.chunk.js",
+    "static/js/2.cedefd91.chunk.js.map": "/static/js/2.cedefd91.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b1067387e2cecfbc075f21764a74451a.js": "/precache-manifest.b1067387e2cecfbc075f21764a74451a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c6b8190d.chunk.css.map": "/static/css/main.c6b8190d.chunk.css.map",
+    "static/js/2.cedefd91.chunk.js.LICENSE.txt": "/static/js/2.cedefd91.chunk.js.LICENSE.txt",
+    "static/media/people.png": "/static/media/people.5cc2d89b.png",
+    "static/media/planet.png": "/static/media/planet.8d9481f5.png",
+    "static/media/star-wars-logo-png-3-transparent.png": "/static/media/star-wars-logo-png-3-transparent.62a19047.png",
+    "static/media/starship.png": "/static/media/starship.f7e7871e.png",
+    "static/media/vehicles.png": "/static/media/vehicles.71f41fb5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf8bcc16.js",
+    "static/js/runtime-main.a1e6d78a.js",
     "static/js/2.cedefd91.chunk.js",
-    "static/css/main.04eacc03.chunk.css",
-    "static/js/main.c9cfd5f2.chunk.js"
+    "static/css/main.c6b8190d.chunk.css",
+    "static/js/main.0dd4d42c.chunk.js"
   ]
 }
