@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c4f3989a6f9cad70f902cd7808a1540",
+    "revision": "985b72169f8de21a4f0e6855485cc721",
     "url": "https://pdhung197.github.io/starwars-client/index.html"
   },
   {
-    "revision": "e8c74383da6ade97d168",
-    "url": "https://pdhung197.github.io/starwars-client/static/css/main.6f0e1ba8.chunk.css"
+    "revision": "97f4eb68063f65ca5129",
+    "url": "https://pdhung197.github.io/starwars-client/static/css/main.8350ae04.chunk.css"
   },
   {
     "revision": "745395d1e850cbd483c9",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://pdhung197.github.io/starwars-client/static/js/2.e1361f04.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e8c74383da6ade97d168",
+    "revision": "97f4eb68063f65ca5129",
     "url": "https://pdhung197.github.io/starwars-client/static/js/main.9faed42f.chunk.js"
   },
   {
