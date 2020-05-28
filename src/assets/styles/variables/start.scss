@@ -13,9 +13,9 @@ $star-big: generate-star-box-shadow(100);
 
 @keyframes starsAnimation {
   from {
-    transform: translate(-1000px, 1000px);
+    transform: translate(0, 0);
   }
   to {
-    transform: translate(0, -1000px);
+    transform: translate(1000px, -1000px);
   }
 }
