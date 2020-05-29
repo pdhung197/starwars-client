@@ -25,7 +25,8 @@ class DataView extends Component {
                 limit: 10
             },
             search: '',
-            detailCharacter: null
+            detailCharacter: null,
+            isLoading: false
         }
     }
 
@@ -41,6 +42,8 @@ class DataView extends Component {
         } = params;
 
         if (search && search.length) params.search = search;
+
+        this.setState({ isLoading: true });
 
         getDataList(dataName, params)
             .then(res => {
@@ -58,10 +61,12 @@ class DataView extends Component {
                         page,
                         count,
                         totalPage: Math.ceil(count / this.state.footerData.limit)
-                    }
+                    },
+                    isLoading: false
                 })
             })
             .catch(error => {
+                this.setState({ isLoading: true });
                 console.log({ error });
             });
     }
@@ -262,7 +267,8 @@ class DataView extends Component {
             dataList,
             footerData,
             detailCharacter,
-            search
+            search,
+            isLoading
         } = this.state || {};
 
         return (
@@ -289,6 +295,7 @@ class DataView extends Component {
                     handleChangeActivedPage={this.handleChangeActivedPage}
                     handleNextOrPreviousPage={this.handleNextOrPreviousPage}
                     handleOnClickRow={this.handleGetDetailItem}
+                    isLoading={isLoading}
                 />
                 <DetailView
                     data={detailCharacter}

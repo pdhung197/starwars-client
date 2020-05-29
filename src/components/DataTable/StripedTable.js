@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './_table.scss';
 
 import TablePagin from './TablePagin';
+import CircleLoader from './../Loader/CircleLoader';
 
 class TableRow extends Component {
     render() {
@@ -50,7 +51,8 @@ class StripedTable extends Component {
             handleChangeActivedPage = () => { },
             handleNextOrPreviousPage = () => { },
             handleOnClickRow,
-            className = ''
+            className = '',
+            isLoading = false
         } = this.props || {}
         return (
             <>
@@ -75,11 +77,17 @@ class StripedTable extends Component {
                                     columns={tableColumns}
                                     handleOnClickRow={handleOnClickRow}
                                 />)
-                                    : <tr>
-                                        <td colSpan={tableHeaders.length}>
-                                            <p className="no-data">Nothing to show</p>
-                                        </td>
-                                    </tr>
+                                    : isLoading ?
+                                        <tr>
+                                            <td colSpan={tableHeaders.length}>
+                                                <CircleLoader />
+                                            </td>
+                                        </tr>
+                                        : <tr>
+                                            <td colSpan={tableHeaders.length}>
+                                                <p className="no-data">Nothing to show</p>
+                                            </td>
+                                        </tr>
                             }
                         </tbody>
                     </table>
